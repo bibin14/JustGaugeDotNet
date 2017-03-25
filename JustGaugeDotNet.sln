@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustGaugeDotNet", "JustGaugeDotNet\JustGaugeDotNet.csproj", "{059EE6C2-ED21-4097-B279-56F8C95D64DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustGaugeDotNet_Demo", "JustGaugeDotNet_Demo\JustGaugeDotNet_Demo.csproj", "{543C051F-588C-432F-9002-FE2AAEE62E02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{059EE6C2-ED21-4097-B279-56F8C95D64DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{059EE6C2-ED21-4097-B279-56F8C95D64DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{059EE6C2-ED21-4097-B279-56F8C95D64DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{543C051F-588C-432F-9002-FE2AAEE62E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{543C051F-588C-432F-9002-FE2AAEE62E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{543C051F-588C-432F-9002-FE2AAEE62E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{543C051F-588C-432F-9002-FE2AAEE62E02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
