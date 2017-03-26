@@ -39,7 +39,7 @@
             this.gaugeViewer.Name = "gaugeViewer";
             this.gaugeViewer.ScriptErrorsSuppressed = true;
             this.gaugeViewer.ScrollBarsEnabled = false;
-            this.gaugeViewer.Size = new System.Drawing.Size(261, 201);
+            this.gaugeViewer.Size = new System.Drawing.Size(386, 287);
             this.gaugeViewer.TabIndex = 0;
             this.gaugeViewer.Url = new System.Uri("", System.UriKind.Relative);
             this.gaugeViewer.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.gaugeViewer_DocumentCompleted);
@@ -50,7 +50,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gaugeViewer);
             this.Name = "JustGuage";
-            this.Size = new System.Drawing.Size(261, 201);
+            this.Size = new System.Drawing.Size(386, 287);
             this.ResumeLayout(false);
 
         }

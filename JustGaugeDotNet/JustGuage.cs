@@ -35,6 +35,7 @@ namespace JustGaugeDotNet
                 if(value >= MinValue && value <= MaxValue) { 
                     _value = value;
                     this.plotGauge();
+                    //this.gaugeViewer.Document.InvokeScript("setValue", new object[] {value});
                 }
                 else
                 {
@@ -43,11 +44,32 @@ namespace JustGaugeDotNet
             }
         }
 
+        private string _title; 
         [Category("JustGauge Values")]
-        public string Title { get; set; }
+        public string Title {
+            get {
+                return _title;
+            }
+            set {
+                _title = value;
+                this.plotGauge();
+            }
+        }
 
+        private string _subtitle;
         [Category("JustGauge Values")]
-        public string Subtitle { get; set; }
+        public string Subtitle
+        {
+            get
+            {
+                return _subtitle;
+            }
+            set
+            {
+                _subtitle = value;
+                this.plotGauge();
+            }
+        }
 
         #endregion
 
@@ -86,8 +108,12 @@ namespace JustGaugeDotNet
             //TextWriter tw = new StreamWriter("gaugeSrc.html", true);
             //tw.WriteLine(gaugeHtml);
             //tw.Close();
-            
+
             //this.gaugeViewer.Url = new System.Uri(System.Environment.CurrentDirectory + "/gaugeSrc.html");
+
+            this.gaugeViewer.Navigate("about:blank");
+            HtmlDocument doc = this.gaugeViewer.Document;
+            doc.Write(String.Empty);
             this.gaugeViewer.DocumentText = gaugeHtml;
         }
 
