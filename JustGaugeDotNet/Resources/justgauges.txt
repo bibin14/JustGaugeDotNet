@@ -81,6 +81,7 @@
                 title: '#Title#',
                 label: '#SubTitle#',
                 relativeGaugeSize: true,
+				pointer: #Pointer#,
                 donut: #Donut#
             });
         }

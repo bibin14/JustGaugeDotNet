@@ -86,6 +86,20 @@ namespace JustGaugeDotNet
             }
         }
 
+        private bool _pointer = true;
+        [Category("JustGauge Values")]
+        public bool Pointer
+        {
+            get
+            {
+                return _pointer;
+            }
+            set
+            {
+                _pointer = value;
+                this.plotGauge();
+            }
+        }
         #endregion
 
         #region DefaultValues
@@ -120,6 +134,7 @@ namespace JustGaugeDotNet
             gaugeHtml = gaugeHtml.Replace("#Title#", this.Title);
             gaugeHtml = gaugeHtml.Replace("#SubTitle#", this.Subtitle);
             gaugeHtml = gaugeHtml.Replace("#Donut#", this.Donut.ToString().ToLower());
+            gaugeHtml = gaugeHtml.Replace("#Pointer#", this.Pointer.ToString().ToLower());
 
             //TextWriter tw = new StreamWriter("gaugeSrc.html", true);
             //tw.WriteLine(gaugeHtml);

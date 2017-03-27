@@ -68,6 +68,7 @@
             this.justGuage5.MaxValue = 100;
             this.justGuage5.MinValue = 0;
             this.justGuage5.Name = "justGuage5";
+            this.justGuage5.Pointer = false;
             this.justGuage5.Size = new System.Drawing.Size(446, 193);
             this.justGuage5.Subtitle = "Value";
             this.justGuage5.TabIndex = 3;
@@ -86,6 +87,7 @@
             this.justGuage4.MaxValue = 1000;
             this.justGuage4.MinValue = 0;
             this.justGuage4.Name = "justGuage4";
+            this.justGuage4.Pointer = true;
             this.justGuage4.Size = new System.Drawing.Size(446, 193);
             this.justGuage4.Subtitle = " ";
             this.justGuage4.TabIndex = 2;
@@ -104,6 +106,7 @@
             this.justGuage2.MaxValue = 100;
             this.justGuage2.MinValue = 0;
             this.justGuage2.Name = "justGuage2";
+            this.justGuage2.Pointer = true;
             this.justGuage2.Size = new System.Drawing.Size(446, 165);
             this.justGuage2.Subtitle = "Subtitle";
             this.justGuage2.TabIndex = 0;
@@ -122,6 +125,7 @@
             this.justGuage3.MaxValue = 1000;
             this.justGuage3.MinValue = 0;
             this.justGuage3.Name = "justGuage3";
+            this.justGuage3.Pointer = false;
             this.justGuage3.Size = new System.Drawing.Size(446, 165);
             this.justGuage3.Subtitle = "";
             this.justGuage3.TabIndex = 1;
@@ -140,6 +144,7 @@
             this.justGuage6.MaxValue = 100;
             this.justGuage6.MinValue = 0;
             this.justGuage6.Name = "justGuage6";
+            this.justGuage6.Pointer = true;
             this.justGuage6.Size = new System.Drawing.Size(446, 194);
             this.justGuage6.Subtitle = "Donut";
             this.justGuage6.TabIndex = 4;
@@ -158,6 +163,7 @@
             this.justGuage7.MaxValue = 500;
             this.justGuage7.MinValue = 100;
             this.justGuage7.Name = "justGuage7";
+            this.justGuage7.Pointer = false;
             this.justGuage7.Size = new System.Drawing.Size(446, 194);
             this.justGuage7.Subtitle = " ";
             this.justGuage7.TabIndex = 5;
