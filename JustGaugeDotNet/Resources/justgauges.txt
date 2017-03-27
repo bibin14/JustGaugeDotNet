@@ -81,7 +81,7 @@
                 title: '#Title#',
                 label: '#SubTitle#',
                 relativeGaugeSize: true,
-                donut: true
+                donut: #Donut#
             });
         }
 

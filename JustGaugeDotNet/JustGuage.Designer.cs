@@ -33,7 +33,9 @@
             // 
             // gaugeViewer
             // 
+            this.gaugeViewer.AllowWebBrowserDrop = false;
             this.gaugeViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gaugeViewer.IsWebBrowserContextMenuEnabled = false;
             this.gaugeViewer.Location = new System.Drawing.Point(0, 0);
             this.gaugeViewer.MinimumSize = new System.Drawing.Size(20, 20);
             this.gaugeViewer.Name = "gaugeViewer";
@@ -42,6 +44,7 @@
             this.gaugeViewer.Size = new System.Drawing.Size(386, 287);
             this.gaugeViewer.TabIndex = 0;
             this.gaugeViewer.Url = new System.Uri("", System.UriKind.Relative);
+            this.gaugeViewer.WebBrowserShortcutsEnabled = false;
             this.gaugeViewer.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.gaugeViewer_DocumentCompleted);
             // 
             // JustGuage

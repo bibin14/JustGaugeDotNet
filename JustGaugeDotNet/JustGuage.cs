@@ -71,6 +71,21 @@ namespace JustGaugeDotNet
             }
         }
 
+        private bool _donut = true;
+        [Category("JustGauge Values")]
+        public bool Donut
+        {
+            get
+            {
+                return _donut;
+            }
+            set
+            {
+                _donut = value;
+                this.plotGauge();
+            }
+        }
+
         #endregion
 
         #region DefaultValues
@@ -94,7 +109,7 @@ namespace JustGaugeDotNet
 
             gaugeHtml = gaugeHtml.Replace("#MinValue#", this.MinValue.ToString());
             gaugeHtml = gaugeHtml.Replace("#MaxValue#", this.MaxValue.ToString());
-            if (this.Value != 0)
+            if (this.Value >= this.MinValue & this.Value <= this.MaxValue)
             {
                 gaugeHtml = gaugeHtml.Replace("#Value#", this.Value.ToString());
             }
@@ -104,6 +119,7 @@ namespace JustGaugeDotNet
           
             gaugeHtml = gaugeHtml.Replace("#Title#", this.Title);
             gaugeHtml = gaugeHtml.Replace("#SubTitle#", this.Subtitle);
+            gaugeHtml = gaugeHtml.Replace("#Donut#", this.Donut.ToString().ToLower());
 
             //TextWriter tw = new StreamWriter("gaugeSrc.html", true);
             //tw.WriteLine(gaugeHtml);

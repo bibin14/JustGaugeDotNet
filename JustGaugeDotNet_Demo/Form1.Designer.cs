@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.justGuage5 = new JustGaugeDotNet.JustGuage();
+            this.justGuage4 = new JustGaugeDotNet.JustGuage();
             this.justGuage2 = new JustGaugeDotNet.JustGuage();
             this.justGuage3 = new JustGaugeDotNet.JustGuage();
-            this.justGuage4 = new JustGaugeDotNet.JustGuage();
-            this.justGuage5 = new JustGaugeDotNet.JustGuage();
+            this.justGuage6 = new JustGaugeDotNet.JustGuage();
+            this.justGuage7 = new JustGaugeDotNet.JustGuage();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,23 +48,63 @@
             this.tableLayoutPanel1.Controls.Add(this.justGuage4, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.justGuage2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.justGuage3, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.justGuage6, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.justGuage7, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(904, 570);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // justGuage5
+            // 
+            this.justGuage5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.justGuage5.Donut = true;
+            this.justGuage5.Location = new System.Drawing.Point(3, 174);
+            this.justGuage5.MaxValue = 100;
+            this.justGuage5.MinValue = 0;
+            this.justGuage5.Name = "justGuage5";
+            this.justGuage5.Size = new System.Drawing.Size(446, 193);
+            this.justGuage5.Subtitle = "Value";
+            this.justGuage5.TabIndex = 3;
+            this.justGuage5.Title = "JustGauge # 3";
+            this.justGuage5.Value = new decimal(new int[] {
+            90,
+            0,
+            0,
+            0});
+            // 
+            // justGuage4
+            // 
+            this.justGuage4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.justGuage4.Donut = true;
+            this.justGuage4.Location = new System.Drawing.Point(455, 174);
+            this.justGuage4.MaxValue = 1000;
+            this.justGuage4.MinValue = 0;
+            this.justGuage4.Name = "justGuage4";
+            this.justGuage4.Size = new System.Drawing.Size(446, 193);
+            this.justGuage4.Subtitle = " ";
+            this.justGuage4.TabIndex = 2;
+            this.justGuage4.Title = "JustGauge # 4";
+            this.justGuage4.Value = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
             // 
             // justGuage2
             // 
             this.justGuage2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.justGuage2.Donut = false;
             this.justGuage2.Location = new System.Drawing.Point(3, 3);
             this.justGuage2.MaxValue = 100;
             this.justGuage2.MinValue = 0;
             this.justGuage2.Name = "justGuage2";
-            this.justGuage2.Size = new System.Drawing.Size(446, 279);
+            this.justGuage2.Size = new System.Drawing.Size(446, 165);
             this.justGuage2.Subtitle = "Subtitle";
             this.justGuage2.TabIndex = 0;
             this.justGuage2.Title = "JustGauge # 1";
@@ -74,11 +117,12 @@
             // justGuage3
             // 
             this.justGuage3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.justGuage3.Donut = false;
             this.justGuage3.Location = new System.Drawing.Point(455, 3);
             this.justGuage3.MaxValue = 1000;
             this.justGuage3.MinValue = 0;
             this.justGuage3.Name = "justGuage3";
-            this.justGuage3.Size = new System.Drawing.Size(446, 279);
+            this.justGuage3.Size = new System.Drawing.Size(446, 165);
             this.justGuage3.Subtitle = "";
             this.justGuage3.TabIndex = 1;
             this.justGuage3.Title = "JustGauge # 2";
@@ -88,36 +132,38 @@
             0,
             0});
             // 
-            // justGuage4
+            // justGuage6
             // 
-            this.justGuage4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.justGuage4.Location = new System.Drawing.Point(455, 288);
-            this.justGuage4.MaxValue = 1000;
-            this.justGuage4.MinValue = 0;
-            this.justGuage4.Name = "justGuage4";
-            this.justGuage4.Size = new System.Drawing.Size(446, 279);
-            this.justGuage4.Subtitle = " ";
-            this.justGuage4.TabIndex = 2;
-            this.justGuage4.Title = "JustGauge # 4";
-            this.justGuage4.Value = new decimal(new int[] {
-            200,
+            this.justGuage6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.justGuage6.Donut = true;
+            this.justGuage6.Location = new System.Drawing.Point(3, 373);
+            this.justGuage6.MaxValue = 100;
+            this.justGuage6.MinValue = 0;
+            this.justGuage6.Name = "justGuage6";
+            this.justGuage6.Size = new System.Drawing.Size(446, 194);
+            this.justGuage6.Subtitle = "Donut";
+            this.justGuage6.TabIndex = 4;
+            this.justGuage6.Title = "JustGauge # 5";
+            this.justGuage6.Value = new decimal(new int[] {
+            55,
             0,
             0,
             0});
             // 
-            // justGuage5
+            // justGuage7
             // 
-            this.justGuage5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.justGuage5.Location = new System.Drawing.Point(3, 288);
-            this.justGuage5.MaxValue = 100;
-            this.justGuage5.MinValue = 0;
-            this.justGuage5.Name = "justGuage5";
-            this.justGuage5.Size = new System.Drawing.Size(446, 279);
-            this.justGuage5.Subtitle = "Value";
-            this.justGuage5.TabIndex = 3;
-            this.justGuage5.Title = "JustGauge # 3";
-            this.justGuage5.Value = new decimal(new int[] {
-            90,
+            this.justGuage7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.justGuage7.Donut = true;
+            this.justGuage7.Location = new System.Drawing.Point(455, 373);
+            this.justGuage7.MaxValue = 500;
+            this.justGuage7.MinValue = 100;
+            this.justGuage7.Name = "justGuage7";
+            this.justGuage7.Size = new System.Drawing.Size(446, 194);
+            this.justGuage7.Subtitle = " ";
+            this.justGuage7.TabIndex = 5;
+            this.justGuage7.Title = "JustGauge # 6";
+            this.justGuage7.Value = new decimal(new int[] {
+            400,
             0,
             0,
             0});
@@ -128,8 +174,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(904, 570);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "JustGaugeDotNet Demo";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -142,6 +189,8 @@
         private JustGaugeDotNet.JustGuage justGuage3;
         private JustGaugeDotNet.JustGuage justGuage5;
         private JustGaugeDotNet.JustGuage justGuage4;
+        private JustGaugeDotNet.JustGuage justGuage6;
+        private JustGaugeDotNet.JustGuage justGuage7;
     }
 }
 
