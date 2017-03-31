@@ -82,6 +82,7 @@
                 label: '#SubTitle#',
                 relativeGaugeSize: true,
 				pointer: #Pointer#,
+				formatNumber: #NumberFormat#,
                 donut: #Donut#
             });
         }

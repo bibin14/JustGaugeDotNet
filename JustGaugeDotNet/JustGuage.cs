@@ -100,6 +100,21 @@ namespace JustGaugeDotNet
                 this.plotGauge();
             }
         }
+        
+        private bool _numformat = true;
+        [Category("JustGauge Values")]
+        public bool NumberFormat
+        {
+            get
+            {
+                return _numformat;
+            }
+            set
+            {
+                _numformat = value;
+                this.plotGauge();
+            }
+        }
         #endregion
 
         #region DefaultValues
@@ -113,7 +128,6 @@ namespace JustGaugeDotNet
             MaxValue = 100;
             this.Title = "Title";
             this.Subtitle = "Subtitle";
-
             this.plotGauge();
         }
 
@@ -135,6 +149,7 @@ namespace JustGaugeDotNet
             gaugeHtml = gaugeHtml.Replace("#SubTitle#", this.Subtitle);
             gaugeHtml = gaugeHtml.Replace("#Donut#", this.Donut.ToString().ToLower());
             gaugeHtml = gaugeHtml.Replace("#Pointer#", this.Pointer.ToString().ToLower());
+            gaugeHtml = gaugeHtml.Replace("#NumberFormat#", this.NumberFormat.ToString().ToLower());
 
             //TextWriter tw = new StreamWriter("gaugeSrc.html", true);
             //tw.WriteLine(gaugeHtml);

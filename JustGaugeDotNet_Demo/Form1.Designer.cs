@@ -68,6 +68,7 @@
             this.justGuage5.MaxValue = 100;
             this.justGuage5.MinValue = 0;
             this.justGuage5.Name = "justGuage5";
+            this.justGuage5.NumberFormat = true;
             this.justGuage5.Pointer = false;
             this.justGuage5.Size = new System.Drawing.Size(446, 193);
             this.justGuage5.Subtitle = "Value";
@@ -87,6 +88,7 @@
             this.justGuage4.MaxValue = 1000;
             this.justGuage4.MinValue = 0;
             this.justGuage4.Name = "justGuage4";
+            this.justGuage4.NumberFormat = true;
             this.justGuage4.Pointer = true;
             this.justGuage4.Size = new System.Drawing.Size(446, 193);
             this.justGuage4.Subtitle = " ";
@@ -106,6 +108,7 @@
             this.justGuage2.MaxValue = 100;
             this.justGuage2.MinValue = 0;
             this.justGuage2.Name = "justGuage2";
+            this.justGuage2.NumberFormat = true;
             this.justGuage2.Pointer = true;
             this.justGuage2.Size = new System.Drawing.Size(446, 165);
             this.justGuage2.Subtitle = "Subtitle";
@@ -122,16 +125,17 @@
             this.justGuage3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.justGuage3.Donut = false;
             this.justGuage3.Location = new System.Drawing.Point(455, 3);
-            this.justGuage3.MaxValue = 1000;
+            this.justGuage3.MaxValue = 100000;
             this.justGuage3.MinValue = 0;
             this.justGuage3.Name = "justGuage3";
+            this.justGuage3.NumberFormat = true;
             this.justGuage3.Pointer = false;
             this.justGuage3.Size = new System.Drawing.Size(446, 165);
-            this.justGuage3.Subtitle = "";
+            this.justGuage3.Subtitle = "Number Format";
             this.justGuage3.TabIndex = 1;
             this.justGuage3.Title = "JustGauge # 2";
             this.justGuage3.Value = new decimal(new int[] {
-            700,
+            69524,
             0,
             0,
             0});
@@ -144,6 +148,7 @@
             this.justGuage6.MaxValue = 100;
             this.justGuage6.MinValue = 0;
             this.justGuage6.Name = "justGuage6";
+            this.justGuage6.NumberFormat = true;
             this.justGuage6.Pointer = true;
             this.justGuage6.Size = new System.Drawing.Size(446, 194);
             this.justGuage6.Subtitle = "Donut";
@@ -160,16 +165,17 @@
             this.justGuage7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.justGuage7.Donut = true;
             this.justGuage7.Location = new System.Drawing.Point(455, 373);
-            this.justGuage7.MaxValue = 500;
+            this.justGuage7.MaxValue = 1500;
             this.justGuage7.MinValue = 100;
             this.justGuage7.Name = "justGuage7";
+            this.justGuage7.NumberFormat = false;
             this.justGuage7.Pointer = false;
             this.justGuage7.Size = new System.Drawing.Size(446, 194);
             this.justGuage7.Subtitle = " ";
             this.justGuage7.TabIndex = 5;
             this.justGuage7.Title = "JustGauge # 6";
             this.justGuage7.Value = new decimal(new int[] {
-            400,
+            1100,
             0,
             0,
             0});
