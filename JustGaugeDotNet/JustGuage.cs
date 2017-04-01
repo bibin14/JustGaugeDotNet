@@ -32,15 +32,15 @@ namespace JustGaugeDotNet
                 return _value;
             }
             set {
-                if(value >= MinValue && value <= MaxValue) { 
-                    _value = value;
-                    this.plotGauge();
-                    //this.gaugeViewer.Document.InvokeScript("setValue", new object[] {value});
-                }
-                else
-                {
-                    throw new System.ArgumentOutOfRangeException("Value out of range.", "Value must be within the defined Min and Max value");
-                }
+                //if(value >= MinValue && value <= MaxValue) { 
+                _value = value;
+                this.plotGauge();
+                //    //this.gaugeViewer.Document.InvokeScript("setValue", new object[] {value});
+                //}
+                //else
+                //{
+                //    throw new System.ArgumentOutOfRangeException("Value out of range.", "Value must be within the defined Min and Max value");
+                //}
             }
         }
 
@@ -71,7 +71,7 @@ namespace JustGaugeDotNet
             }
         }
 
-        private bool _donut = true;
+        private bool _donut = false;
         [Category("JustGauge Values")]
         public bool Donut
         {
@@ -137,26 +137,13 @@ namespace JustGaugeDotNet
 
             gaugeHtml = gaugeHtml.Replace("#MinValue#", this.MinValue.ToString());
             gaugeHtml = gaugeHtml.Replace("#MaxValue#", this.MaxValue.ToString());
-            if (this.Value >= this.MinValue & this.Value <= this.MaxValue)
-            {
-                gaugeHtml = gaugeHtml.Replace("#Value#", this.Value.ToString());
-            }
-            else {  /// html : getRandomInt(0, 100)
-                gaugeHtml = gaugeHtml.Replace("#Value#", "getRandomInt(" + this.MinValue + ","  + this.MaxValue + ")");
-            }
-          
+            gaugeHtml = gaugeHtml.Replace("#Value#", this.Value.ToString());
             gaugeHtml = gaugeHtml.Replace("#Title#", this.Title);
             gaugeHtml = gaugeHtml.Replace("#SubTitle#", this.Subtitle);
             gaugeHtml = gaugeHtml.Replace("#Donut#", this.Donut.ToString().ToLower());
             gaugeHtml = gaugeHtml.Replace("#Pointer#", this.Pointer.ToString().ToLower());
             gaugeHtml = gaugeHtml.Replace("#NumberFormat#", this.NumberFormat.ToString().ToLower());
-
-            //TextWriter tw = new StreamWriter("gaugeSrc.html", true);
-            //tw.WriteLine(gaugeHtml);
-            //tw.Close();
-
-            //this.gaugeViewer.Url = new System.Uri(System.Environment.CurrentDirectory + "/gaugeSrc.html");
-
+                        
             this.gaugeViewer.Navigate("about:blank");
             HtmlDocument doc = this.gaugeViewer.Document;
             doc.Write(String.Empty);
