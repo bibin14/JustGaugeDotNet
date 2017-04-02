@@ -83,6 +83,7 @@
                 relativeGaugeSize: true,
 				pointer: #Pointer#,
 				formatNumber: #NumberFormat#,
+				reverse: #Reverse#,
                 donut: #Donut#
             });
         }

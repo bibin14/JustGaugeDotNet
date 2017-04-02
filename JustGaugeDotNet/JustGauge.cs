@@ -16,7 +16,7 @@ namespace JustGaugeDotNet
 {
     [PermissionSet(SecurityAction.Demand, Name = "FullTrust")]
     [ComVisible(true)]
-    public partial class JustGuage : UserControl
+    public partial class JustGauge : UserControl
     {
         #region Properties
         [Category("JustGauge Values")]
@@ -115,13 +115,28 @@ namespace JustGaugeDotNet
                 this.plotGauge();
             }
         }
+        
+        private bool _reverse = false;
+        [Category("JustGauge Values")]
+        public bool Reverse
+        {
+            get
+            {
+                return _reverse;
+            }
+            set
+            {
+                _reverse = value;
+                this.plotGauge();
+            }
+        }
         #endregion
 
         #region DefaultValues
 
         #endregion
 
-        public JustGuage()
+        public JustGauge()
         {
             InitializeComponent();
             MinValue = 0;
@@ -143,7 +158,8 @@ namespace JustGaugeDotNet
             gaugeHtml = gaugeHtml.Replace("#Donut#", this.Donut.ToString().ToLower());
             gaugeHtml = gaugeHtml.Replace("#Pointer#", this.Pointer.ToString().ToLower());
             gaugeHtml = gaugeHtml.Replace("#NumberFormat#", this.NumberFormat.ToString().ToLower());
-                        
+            gaugeHtml = gaugeHtml.Replace("#Reverse#", this.Reverse.ToString().ToLower());
+
             this.gaugeViewer.Navigate("about:blank");
             HtmlDocument doc = this.gaugeViewer.Document;
             doc.Write(String.Empty);

@@ -1,6 +1,6 @@
 ﻿namespace JustGaugeDotNet
 {
-    partial class JustGuage
+    partial class JustGauge
     {
         /// <summary> 
         /// Required designer variable.
