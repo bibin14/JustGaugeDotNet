@@ -47,13 +47,14 @@
             this.gaugeViewer.WebBrowserShortcutsEnabled = false;
             this.gaugeViewer.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.gaugeViewer_DocumentCompleted);
             // 
-            // JustGuage
+            // JustGauge
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gaugeViewer);
-            this.Name = "JustGuage";
+            this.Name = "JustGauge";
             this.Size = new System.Drawing.Size(386, 287);
+            this.FontChanged += new System.EventHandler(this.JustGauge_FontChanged);
             this.ResumeLayout(false);
 
         }

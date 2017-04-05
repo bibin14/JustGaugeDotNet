@@ -84,6 +84,7 @@
 				pointer: #Pointer#,
 				formatNumber: #NumberFormat#,
 				reverse: #Reverse#,
+				titleFontFamily: '#FontFamily#',
                 donut: #Donut#
             });
         }

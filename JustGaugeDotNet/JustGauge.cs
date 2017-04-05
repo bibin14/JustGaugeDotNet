@@ -159,6 +159,7 @@ namespace JustGaugeDotNet
             gaugeHtml = gaugeHtml.Replace("#Pointer#", this.Pointer.ToString().ToLower());
             gaugeHtml = gaugeHtml.Replace("#NumberFormat#", this.NumberFormat.ToString().ToLower());
             gaugeHtml = gaugeHtml.Replace("#Reverse#", this.Reverse.ToString().ToLower());
+            gaugeHtml = gaugeHtml.Replace("#FontFamily#", this.Font.Name.ToString());
 
             this.gaugeViewer.Navigate("about:blank");
             HtmlDocument doc = this.gaugeViewer.Document;
@@ -170,5 +171,12 @@ namespace JustGaugeDotNet
         {
            // File.Delete("gaugeSrc.html");
         }
+
+        #region Appearance
+        private void JustGauge_FontChanged(object sender, EventArgs e)
+        {
+            this.plotGauge();
+        }
+        #endregion
     }
 }
