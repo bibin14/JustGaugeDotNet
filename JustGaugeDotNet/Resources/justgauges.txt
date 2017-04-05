@@ -39,6 +39,8 @@
     .gauge {
         display: block;
         float: left;
+		font-style: #FontStyle#;
+		background-color: white;
     }
 
     #g1 {
@@ -85,6 +87,7 @@
 				formatNumber: #NumberFormat#,
 				reverse: #Reverse#,
 				titleFontFamily: '#FontFamily#',
+				titleFontColor: '#FontColor#',
                 donut: #Donut#
             });
         }

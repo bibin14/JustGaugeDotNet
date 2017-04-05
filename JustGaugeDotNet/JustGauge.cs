@@ -160,6 +160,16 @@ namespace JustGaugeDotNet
             gaugeHtml = gaugeHtml.Replace("#NumberFormat#", this.NumberFormat.ToString().ToLower());
             gaugeHtml = gaugeHtml.Replace("#Reverse#", this.Reverse.ToString().ToLower());
             gaugeHtml = gaugeHtml.Replace("#FontFamily#", this.Font.Name.ToString());
+            gaugeHtml = gaugeHtml.Replace("#FontColor#", this.ForeColor.Name.ToLower());
+            if (this.Font.Italic == true)
+            {
+                gaugeHtml = gaugeHtml.Replace("#FontStyle#", "italic");
+            }
+            else
+            {
+                gaugeHtml = gaugeHtml.Replace("#FontStyle#", "normal");
+            }
+                
 
             this.gaugeViewer.Navigate("about:blank");
             HtmlDocument doc = this.gaugeViewer.Document;
@@ -174,6 +184,11 @@ namespace JustGaugeDotNet
 
         #region Appearance
         private void JustGauge_FontChanged(object sender, EventArgs e)
+        {
+            this.plotGauge();
+        }
+
+        private void JustGauge_ForeColorChanged(object sender, EventArgs e)
         {
             this.plotGauge();
         }
