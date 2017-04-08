@@ -140,7 +140,7 @@ namespace JustGaugeDotNet
         {
             InitializeComponent();
             MinValue = 0;
-            MaxValue = 100;
+            MaxValue = 100;            
             this.Title = "Title";
             this.Subtitle = "Subtitle";
             this.plotGauge();
@@ -160,7 +160,8 @@ namespace JustGaugeDotNet
             gaugeHtml = gaugeHtml.Replace("#NumberFormat#", this.NumberFormat.ToString().ToLower());
             gaugeHtml = gaugeHtml.Replace("#Reverse#", this.Reverse.ToString().ToLower());
             gaugeHtml = gaugeHtml.Replace("#FontFamily#", this.Font.Name.ToString());
-            gaugeHtml = gaugeHtml.Replace("#FontColor#", this.ForeColor.Name.ToLower());
+            gaugeHtml = gaugeHtml.Replace("#FontColor#", this.ForeColor.Name.ToLower()); 
+            gaugeHtml = gaugeHtml.Replace("#BackColor#", this.BackColor.Name.ToLower());
             if (this.Font.Italic == true)
             {
                 gaugeHtml = gaugeHtml.Replace("#FontStyle#", "italic");
@@ -192,6 +193,13 @@ namespace JustGaugeDotNet
         {
             this.plotGauge();
         }
+
+        private void JustGauge_BackColorChanged(object sender, EventArgs e)
+        {
+            this.plotGauge();
+        }
+
         #endregion
+
     }
 }

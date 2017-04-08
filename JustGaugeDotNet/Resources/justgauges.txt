@@ -40,7 +40,7 @@
         display: block;
         float: left;
 		font-style: #FontStyle#;
-		background-color: white;
+		background-color: #BackColor#;
     }
 
     #g1 {

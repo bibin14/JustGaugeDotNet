@@ -51,9 +51,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.gaugeViewer);
             this.Name = "JustGauge";
             this.Size = new System.Drawing.Size(386, 287);
+            this.BackColorChanged += new System.EventHandler(this.JustGauge_BackColorChanged);
             this.FontChanged += new System.EventHandler(this.JustGauge_FontChanged);
             this.ForeColorChanged += new System.EventHandler(this.JustGauge_ForeColorChanged);
             this.ResumeLayout(false);
