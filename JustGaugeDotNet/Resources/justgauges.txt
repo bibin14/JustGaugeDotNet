@@ -32,7 +32,10 @@
         right: 0;
         bottom: 0;
         left: 0;
-        margin: 10px;
+        margin-top: #MTop#px;
+		margin-bottom: #MBtm#px;
+		margin-right: #MRgt#px;
+		margin-left: #MLft#px;
         border: 1px solid #cccccc;
     }
 

@@ -160,8 +160,12 @@ namespace JustGaugeDotNet
             gaugeHtml = gaugeHtml.Replace("#NumberFormat#", this.NumberFormat.ToString().ToLower());
             gaugeHtml = gaugeHtml.Replace("#Reverse#", this.Reverse.ToString().ToLower());
             gaugeHtml = gaugeHtml.Replace("#FontFamily#", this.Font.Name.ToString());
-            gaugeHtml = gaugeHtml.Replace("#FontColor#", this.ForeColor.Name.ToLower()); 
+            gaugeHtml = gaugeHtml.Replace("#FontColor#", this.ForeColor.Name.ToLower());
             gaugeHtml = gaugeHtml.Replace("#BackColor#", this.BackColor.Name.ToLower());
+            gaugeHtml = gaugeHtml.Replace("#MTop#", this.Margin.Top.ToString());
+            gaugeHtml = gaugeHtml.Replace("#MBtm#", this.Margin.Bottom.ToString());
+            gaugeHtml = gaugeHtml.Replace("#MLft#", this.Margin.Left.ToString());
+            gaugeHtml = gaugeHtml.Replace("#MRgt#", this.Margin.Right.ToString());
             if (this.Font.Italic == true)
             {
                 gaugeHtml = gaugeHtml.Replace("#FontStyle#", "italic");
@@ -199,6 +203,10 @@ namespace JustGaugeDotNet
             this.plotGauge();
         }
 
+        private void JustGauge_MarginChanged(object sender, EventArgs e)
+        {
+            this.plotGauge();
+        }
         #endregion
 
     }

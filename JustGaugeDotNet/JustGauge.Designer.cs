@@ -58,6 +58,7 @@
             this.BackColorChanged += new System.EventHandler(this.JustGauge_BackColorChanged);
             this.FontChanged += new System.EventHandler(this.JustGauge_FontChanged);
             this.ForeColorChanged += new System.EventHandler(this.JustGauge_ForeColorChanged);
+            this.MarginChanged += new System.EventHandler(this.JustGauge_MarginChanged);
             this.ResumeLayout(false);
 
         }
