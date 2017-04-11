@@ -130,6 +130,21 @@ namespace JustGaugeDotNet
                 this.plotGauge();
             }
         }
+
+        private bool _hideMinMax = false;
+        [Category("JustGauge Values")]
+        public bool HideMinMax
+        {
+            get
+            {
+                return _hideMinMax;
+            }
+            set
+            {
+                _hideMinMax = value;
+                this.plotGauge();
+            }
+        }
         #endregion
 
         #region DefaultValues
@@ -159,13 +174,14 @@ namespace JustGaugeDotNet
             gaugeHtml = gaugeHtml.Replace("#Pointer#", this.Pointer.ToString().ToLower());
             gaugeHtml = gaugeHtml.Replace("#NumberFormat#", this.NumberFormat.ToString().ToLower());
             gaugeHtml = gaugeHtml.Replace("#Reverse#", this.Reverse.ToString().ToLower());
+            gaugeHtml = gaugeHtml.Replace("#HideMinMax#", this.HideMinMax.ToString().ToLower());
             gaugeHtml = gaugeHtml.Replace("#FontFamily#", this.Font.Name.ToString());
             gaugeHtml = gaugeHtml.Replace("#FontColor#", this.ForeColor.Name.ToLower());
             gaugeHtml = gaugeHtml.Replace("#BackColor#", this.BackColor.Name.ToLower());
             gaugeHtml = gaugeHtml.Replace("#MTop#", this.Margin.Top.ToString());
             gaugeHtml = gaugeHtml.Replace("#MBtm#", this.Margin.Bottom.ToString());
             gaugeHtml = gaugeHtml.Replace("#MLft#", this.Margin.Left.ToString());
-            gaugeHtml = gaugeHtml.Replace("#MRgt#", this.Margin.Right.ToString());
+            gaugeHtml = gaugeHtml.Replace("#MRgt#", this.Margin.Right.ToString()); 
             if (this.Font.Italic == true)
             {
                 gaugeHtml = gaugeHtml.Replace("#FontStyle#", "italic");

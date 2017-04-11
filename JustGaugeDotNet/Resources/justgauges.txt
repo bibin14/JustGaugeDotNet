@@ -91,7 +91,8 @@
 				reverse: #Reverse#,
 				titleFontFamily: '#FontFamily#',
 				titleFontColor: '#FontColor#',
-                donut: #Donut#
+                donut: #Donut#,
+				hideMinMax: #HideMinMax#
             });
         }
 
