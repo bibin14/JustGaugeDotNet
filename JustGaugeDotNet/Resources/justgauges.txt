@@ -92,6 +92,7 @@
 				titleFontFamily: '#FontFamily#',
 				titleFontColor: '#FontColor#',
                 donut: #Donut#,
+				hideInnerShadow: #HideInnerShadow#,
 				hideMinMax: #HideMinMax#
             });
         }

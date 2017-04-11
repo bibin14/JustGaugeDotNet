@@ -145,6 +145,21 @@ namespace JustGaugeDotNet
                 this.plotGauge();
             }
         }
+
+        private bool _hideInnerShadow = false;
+        [Category("JustGauge Values")]
+        public bool HideInnerShadow
+        {
+            get
+            {
+                return _hideInnerShadow;
+            }
+            set
+            {
+                _hideInnerShadow = value;
+                this.plotGauge();
+            }
+        }
         #endregion
 
         #region DefaultValues
@@ -175,6 +190,7 @@ namespace JustGaugeDotNet
             gaugeHtml = gaugeHtml.Replace("#NumberFormat#", this.NumberFormat.ToString().ToLower());
             gaugeHtml = gaugeHtml.Replace("#Reverse#", this.Reverse.ToString().ToLower());
             gaugeHtml = gaugeHtml.Replace("#HideMinMax#", this.HideMinMax.ToString().ToLower());
+            gaugeHtml = gaugeHtml.Replace("#HideInnerShadow#", this.HideInnerShadow.ToString().ToLower());
             gaugeHtml = gaugeHtml.Replace("#FontFamily#", this.Font.Name.ToString());
             gaugeHtml = gaugeHtml.Replace("#FontColor#", this.ForeColor.Name.ToLower());
             gaugeHtml = gaugeHtml.Replace("#BackColor#", this.BackColor.Name.ToLower());
