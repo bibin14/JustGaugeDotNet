@@ -62,8 +62,13 @@
             // 
             // justGuage5
             // 
+            this.justGuage5.BackColor = System.Drawing.Color.White;
             this.justGuage5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.justGuage5.Donut = false;
+            this.justGuage5.ForeColor = System.Drawing.Color.Black;
+            this.justGuage5.GaugeColor = System.Drawing.Color.Empty;
+            this.justGuage5.HideInnerShadow = false;
+            this.justGuage5.HideMinMax = false;
             this.justGuage5.Location = new System.Drawing.Point(3, 174);
             this.justGuage5.MaxValue = 100;
             this.justGuage5.MinValue = 0;
@@ -83,8 +88,13 @@
             // 
             // justGuage4
             // 
+            this.justGuage4.BackColor = System.Drawing.Color.White;
             this.justGuage4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.justGuage4.Donut = false;
+            this.justGuage4.ForeColor = System.Drawing.Color.Maroon;
+            this.justGuage4.GaugeColor = System.Drawing.Color.White;
+            this.justGuage4.HideInnerShadow = true;
+            this.justGuage4.HideMinMax = false;
             this.justGuage4.Location = new System.Drawing.Point(455, 174);
             this.justGuage4.MaxValue = 1000;
             this.justGuage4.MinValue = 0;
@@ -104,8 +114,13 @@
             // 
             // justGuage2
             // 
+            this.justGuage2.BackColor = System.Drawing.Color.White;
             this.justGuage2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.justGuage2.Donut = false;
+            this.justGuage2.ForeColor = System.Drawing.Color.Black;
+            this.justGuage2.GaugeColor = System.Drawing.Color.Empty;
+            this.justGuage2.HideInnerShadow = false;
+            this.justGuage2.HideMinMax = false;
             this.justGuage2.Location = new System.Drawing.Point(3, 3);
             this.justGuage2.MaxValue = 100;
             this.justGuage2.MinValue = 0;
@@ -125,8 +140,13 @@
             // 
             // justGuage3
             // 
+            this.justGuage3.BackColor = System.Drawing.Color.White;
             this.justGuage3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.justGuage3.Donut = false;
+            this.justGuage3.ForeColor = System.Drawing.Color.Black;
+            this.justGuage3.GaugeColor = System.Drawing.Color.Empty;
+            this.justGuage3.HideInnerShadow = false;
+            this.justGuage3.HideMinMax = false;
             this.justGuage3.Location = new System.Drawing.Point(455, 3);
             this.justGuage3.MaxValue = 100000;
             this.justGuage3.MinValue = 0;
@@ -146,8 +166,13 @@
             // 
             // justGuage6
             // 
+            this.justGuage6.BackColor = System.Drawing.Color.White;
             this.justGuage6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.justGuage6.Donut = true;
+            this.justGuage6.ForeColor = System.Drawing.Color.Black;
+            this.justGuage6.GaugeColor = System.Drawing.Color.Empty;
+            this.justGuage6.HideInnerShadow = false;
+            this.justGuage6.HideMinMax = false;
             this.justGuage6.Location = new System.Drawing.Point(3, 373);
             this.justGuage6.MaxValue = 100;
             this.justGuage6.MinValue = 0;
@@ -167,8 +192,13 @@
             // 
             // justGuage7
             // 
+            this.justGuage7.BackColor = System.Drawing.Color.White;
             this.justGuage7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.justGuage7.Donut = true;
+            this.justGuage7.Donut = false;
+            this.justGuage7.ForeColor = System.Drawing.Color.Black;
+            this.justGuage7.GaugeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.justGuage7.HideInnerShadow = false;
+            this.justGuage7.HideMinMax = false;
             this.justGuage7.Location = new System.Drawing.Point(455, 373);
             this.justGuage7.MaxValue = 1500;
             this.justGuage7.MinValue = 100;

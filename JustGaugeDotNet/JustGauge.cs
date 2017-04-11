@@ -160,6 +160,21 @@ namespace JustGaugeDotNet
                 this.plotGauge();
             }
         }
+
+        private Color _gaugeColor = Color.Empty; //= System.Drawing.Color.Gainsboro;//.ColorTranslator.FromHtml("#edebeb");
+        [Category("JustGauge Values")]
+        public Color GaugeColor
+        {
+            get
+            {
+                return _gaugeColor;
+            }
+            set
+            {
+                _gaugeColor = value;
+                this.plotGauge();
+            }
+        }
         #endregion
 
         #region DefaultValues
@@ -171,8 +186,11 @@ namespace JustGaugeDotNet
             InitializeComponent();
             MinValue = 0;
             MaxValue = 100;            
-            this.Title = "Title";
-            this.Subtitle = "Subtitle";
+            this._title = "Title";
+            this._subtitle = "Subtitle";
+            //this._gaugeColor = Color.Gainsboro;
+            this.ForeColor = Color.Black;
+            this.ForeColorChanged += new System.EventHandler(this.JustGauge_ForeColorChanged);
             this.plotGauge();
         }
 
@@ -197,7 +215,17 @@ namespace JustGaugeDotNet
             gaugeHtml = gaugeHtml.Replace("#MTop#", this.Margin.Top.ToString());
             gaugeHtml = gaugeHtml.Replace("#MBtm#", this.Margin.Bottom.ToString());
             gaugeHtml = gaugeHtml.Replace("#MLft#", this.Margin.Left.ToString());
-            gaugeHtml = gaugeHtml.Replace("#MRgt#", this.Margin.Right.ToString()); 
+            gaugeHtml = gaugeHtml.Replace("#MRgt#", this.Margin.Right.ToString());
+            //gaugeHtml = gaugeHtml.Replace("#GaugeColor#", this.GaugeColor.Name.ToLower());
+            if (this.GaugeColor == Color.Empty)
+            {
+                gaugeHtml = gaugeHtml.Replace("#GaugeColor#", "");
+            }
+            else
+            {
+                gaugeHtml = gaugeHtml.Replace("#GaugeColor#", "gaugeColor: '" + this.GaugeColor.Name.ToLower() + "', ");
+
+            }
             if (this.Font.Italic == true)
             {
                 gaugeHtml = gaugeHtml.Replace("#FontStyle#", "italic");

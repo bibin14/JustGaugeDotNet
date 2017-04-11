@@ -93,6 +93,7 @@
 				titleFontColor: '#FontColor#',
                 donut: #Donut#,
 				hideInnerShadow: #HideInnerShadow#,
+				#GaugeColor#
 				hideMinMax: #HideMinMax#
             });
         }
