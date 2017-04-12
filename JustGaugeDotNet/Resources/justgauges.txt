@@ -94,7 +94,8 @@
                 donut: #Donut#,
 				hideInnerShadow: #HideInnerShadow#,
 				#GaugeColor#
-				hideMinMax: #HideMinMax#
+				hideMinMax: #HideMinMax#,
+				gaugeWidthScale: #GaugeScaleWidth#
             });
         }
 

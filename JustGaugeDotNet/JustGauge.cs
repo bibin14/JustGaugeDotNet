@@ -161,7 +161,7 @@ namespace JustGaugeDotNet
             }
         }
 
-        private Color _gaugeColor = Color.Empty; //= System.Drawing.Color.Gainsboro;//.ColorTranslator.FromHtml("#edebeb");
+        private Color _gaugeColor = Color.Empty; //= System.Drawing.Color.Gainsboro;
         [Category("JustGauge Values")]
         public Color GaugeColor
         {
@@ -175,6 +175,29 @@ namespace JustGaugeDotNet
                 this.plotGauge();
             }
         }
+
+        private int _gaugeScaleWidth =100;
+        [Category("JustGauge Values")]
+        public int GaugeScaleWidth
+        {
+            get
+            {
+                return _gaugeScaleWidth;
+            }
+            set
+            {
+                if (value >= 0 && value <= 100)
+                {
+                    _gaugeScaleWidth = value;
+                    this.plotGauge();
+                }
+                else
+                {
+                    throw new System.ArgumentOutOfRangeException("Value out of range.", "Value must be within the defined 1 and 100");
+                }
+            }
+        }
+
         #endregion
 
         #region DefaultValues
@@ -216,7 +239,7 @@ namespace JustGaugeDotNet
             gaugeHtml = gaugeHtml.Replace("#MBtm#", this.Margin.Bottom.ToString());
             gaugeHtml = gaugeHtml.Replace("#MLft#", this.Margin.Left.ToString());
             gaugeHtml = gaugeHtml.Replace("#MRgt#", this.Margin.Right.ToString());
-            //gaugeHtml = gaugeHtml.Replace("#GaugeColor#", this.GaugeColor.Name.ToLower());
+            gaugeHtml = gaugeHtml.Replace("#GaugeScaleWidth#", Convert.ToDecimal(this.GaugeScaleWidth/100.00).ToString());
             if (this.GaugeColor == Color.Empty)
             {
                 gaugeHtml = gaugeHtml.Replace("#GaugeColor#", "");
