@@ -9,7 +9,7 @@ namespace JustGaugeDotNet
 {
     class GaugeSector
     {
-        public Color Color { get; set; }
+        public Color SectorColor { get; set; }
         public int HighValue { get; set; }
         public int LowValue { get; set; }
     }

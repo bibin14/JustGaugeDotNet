@@ -20,9 +20,11 @@ namespace JustGaugeDotNet
     {
         #region Properties
         [Category("JustGauge Values")]
+        [DisplayName("Min Value")]
         public int MinValue { get; set; }
 
         [Category("JustGauge Values")]
+        [DisplayName("Max Value")]
         public int MaxValue { get; set; }
 
         private decimal _value;
@@ -88,6 +90,7 @@ namespace JustGaugeDotNet
 
         private bool _pointer = true;
         [Category("JustGauge Values")]
+        [DisplayName("Enable Pointer")]
         public bool Pointer
         {
             get
@@ -103,6 +106,7 @@ namespace JustGaugeDotNet
         
         private bool _numformat = true;
         [Category("JustGauge Values")]
+        [DisplayName("Format Numbers")]
         public bool NumberFormat
         {
             get
@@ -133,6 +137,7 @@ namespace JustGaugeDotNet
 
         private bool _hideMinMax = false;
         [Category("JustGauge Values")]
+        [DisplayName("Hide Min Max")]
         public bool HideMinMax
         {
             get
@@ -148,6 +153,7 @@ namespace JustGaugeDotNet
 
         private bool _hideInnerShadow = false;
         [Category("JustGauge Values")]
+        [DisplayName("Hide Inner Shadow")]
         public bool HideInnerShadow
         {
             get
@@ -163,6 +169,7 @@ namespace JustGaugeDotNet
 
         private Color _gaugeColor = Color.Empty; //= System.Drawing.Color.Gainsboro;
         [Category("JustGauge Values")]
+        [DisplayName("Gauge BackColor")]
         public Color GaugeColor
         {
             get
@@ -178,6 +185,7 @@ namespace JustGaugeDotNet
 
         private int _gaugeScaleWidth =100;
         [Category("JustGauge Values")]
+        [DisplayName("Gauge Scale Width")]
         public int GaugeScaleWidth
         {
             get
