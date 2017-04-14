@@ -21,9 +21,11 @@ namespace JustGaugeDotNet
         #region Properties
         [Category("JustGauge Values")]
         [DisplayName("Min Value")]
+        [Description("Beginning Value of the Gauge")]
         public int MinValue { get; set; }
 
         [Category("JustGauge Values")]
+        [Description("Ending Value of the Gauge")]
         [DisplayName("Max Value")]
         public int MaxValue { get; set; }
 
@@ -75,6 +77,7 @@ namespace JustGaugeDotNet
 
         private bool _donut = false;
         [Category("JustGauge Values")]
+        [Description("Indicates whether to display as Donut or not")]
         public bool Donut
         {
             get
@@ -91,6 +94,7 @@ namespace JustGaugeDotNet
         private bool _pointer = true;
         [Category("JustGauge Values")]
         [DisplayName("Enable Pointer")]
+        [Description("Indicates whether to display Pointer on the Gauge or not")]
         public bool Pointer
         {
             get
@@ -154,6 +158,7 @@ namespace JustGaugeDotNet
         private bool _hideInnerShadow = false;
         [Category("JustGauge Values")]
         [DisplayName("Hide Inner Shadow")]
+        [Description("Indicates whether to display Inner Shadow of the Gauge or not")]
         public bool HideInnerShadow
         {
             get
