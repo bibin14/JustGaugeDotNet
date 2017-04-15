@@ -36,15 +36,12 @@ namespace JustGaugeDotNet
                 return _value;
             }
             set {
-                //if(value >= MinValue && value <= MaxValue) { 
                 _value = value;
-                this.plotGauge();
-                //    //this.gaugeViewer.Document.InvokeScript("setValue", new object[] {value});
-                //}
-                //else
-                //{
-                //    throw new System.ArgumentOutOfRangeException("Value out of range.", "Value must be within the defined Min and Max value");
-                //}
+                object[] args = { _value };
+                this.gaugeViewer.Document.InvokeScript("setValue", args);
+                //object[] codeString = { "g1.refresh(" + _value + ");" };
+                //gaugeViewer.Document.InvokeScript("eval", codeString);
+                
             }
         }
 
