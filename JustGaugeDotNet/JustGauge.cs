@@ -208,6 +208,23 @@ namespace JustGaugeDotNet
             }
         }
 
+        ////customSectors Property
+        //private List<GaugeSector> _sectors = new List<GaugeSector>();
+        //[Category("JustGauge Values")]
+        //[DisplayName("Gauge Custom Sectors")]
+        //[DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+        //[Browsable(true)]
+        //List<GaugeSector> Sectors
+        //{
+        //    get {
+        //        return _sectors;
+        //    }
+        //    set
+        //    {
+        //        _sectors = value;
+        //    }
+        // }
+
         #endregion
 
         #region DefaultValues
