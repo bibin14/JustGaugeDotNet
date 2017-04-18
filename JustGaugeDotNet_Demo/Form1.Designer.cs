@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.justGauge2 = new JustGaugeDotNet.JustGauge();
+            this.justGauge1 = new JustGaugeDotNet.JustGauge();
             this.justGuage5 = new JustGaugeDotNet.JustGauge();
             this.justGuage4 = new JustGaugeDotNet.JustGauge();
             this.justGuage2 = new JustGaugeDotNet.JustGauge();
             this.justGuage3 = new JustGaugeDotNet.JustGauge();
             this.justGuage6 = new JustGaugeDotNet.JustGauge();
             this.justGuage7 = new JustGaugeDotNet.JustGauge();
-            this.justGauge1 = new JustGaugeDotNet.JustGauge();
-            this.justGauge2 = new JustGaugeDotNet.JustGauge();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +64,60 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(904, 633);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // justGauge2
+            // 
+            this.justGauge2.BackColor = System.Drawing.Color.White;
+            this.justGauge2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.justGauge2.Donut = false;
+            this.justGauge2.ForeColor = System.Drawing.Color.Black;
+            this.justGauge2.GaugeColor = System.Drawing.Color.Empty;
+            this.justGauge2.GaugeScaleWidth = 100;
+            this.justGauge2.HideInnerShadow = false;
+            this.justGauge2.HideMinMax = true;
+            this.justGauge2.Location = new System.Drawing.Point(3, 477);
+            this.justGauge2.MaxValue = 100;
+            this.justGauge2.MinValue = 0;
+            this.justGauge2.Name = "justGauge2";
+            this.justGauge2.NumberFormat = true;
+            this.justGauge2.Pointer = true;
+            this.justGauge2.Reverse = false;
+            this.justGauge2.Size = new System.Drawing.Size(446, 153);
+            this.justGauge2.Subtitle = "Hide MinMax";
+            this.justGauge2.TabIndex = 7;
+            this.justGauge2.Title = "JustGauge # 7";
+            this.justGauge2.Value = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            // 
+            // justGauge1
+            // 
+            this.justGauge1.BackColor = System.Drawing.Color.White;
+            this.justGauge1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.justGauge1.Donut = false;
+            this.justGauge1.ForeColor = System.Drawing.Color.Black;
+            this.justGauge1.GaugeColor = System.Drawing.Color.Empty;
+            this.justGauge1.GaugeScaleWidth = 30;
+            this.justGauge1.HideInnerShadow = false;
+            this.justGauge1.HideMinMax = false;
+            this.justGauge1.Location = new System.Drawing.Point(455, 477);
+            this.justGauge1.MaxValue = 100;
+            this.justGauge1.MinValue = 0;
+            this.justGauge1.Name = "justGauge1";
+            this.justGauge1.NumberFormat = true;
+            this.justGauge1.Pointer = true;
+            this.justGauge1.Reverse = false;
+            this.justGauge1.Size = new System.Drawing.Size(446, 153);
+            this.justGauge1.Subtitle = "Gauge Scale Width";
+            this.justGauge1.TabIndex = 6;
+            this.justGauge1.Title = "JustGauge # 8";
+            this.justGauge1.Value = new decimal(new int[] {
+            35,
+            0,
+            0,
+            0});
             // 
             // justGuage5
             // 
@@ -168,7 +222,7 @@
             this.justGuage3.TabIndex = 1;
             this.justGuage3.Title = "JustGauge # 2";
             this.justGuage3.Value = new decimal(new int[] {
-            69524,
+            69525,
             0,
             0,
             0});
@@ -223,60 +277,6 @@
             this.justGuage7.Title = "JustGauge # 6";
             this.justGuage7.Value = new decimal(new int[] {
             1100,
-            0,
-            0,
-            0});
-            // 
-            // justGauge1
-            // 
-            this.justGauge1.BackColor = System.Drawing.Color.White;
-            this.justGauge1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.justGauge1.Donut = false;
-            this.justGauge1.ForeColor = System.Drawing.Color.Black;
-            this.justGauge1.GaugeColor = System.Drawing.Color.Empty;
-            this.justGauge1.GaugeScaleWidth = 30;
-            this.justGauge1.HideInnerShadow = false;
-            this.justGauge1.HideMinMax = false;
-            this.justGauge1.Location = new System.Drawing.Point(455, 477);
-            this.justGauge1.MaxValue = 100;
-            this.justGauge1.MinValue = 0;
-            this.justGauge1.Name = "justGauge1";
-            this.justGauge1.NumberFormat = true;
-            this.justGauge1.Pointer = true;
-            this.justGauge1.Reverse = false;
-            this.justGauge1.Size = new System.Drawing.Size(446, 153);
-            this.justGauge1.Subtitle = "Gauge Scale Width";
-            this.justGauge1.TabIndex = 6;
-            this.justGauge1.Title = "JustGauge # 8";
-            this.justGauge1.Value = new decimal(new int[] {
-            80,
-            0,
-            0,
-            0});
-            // 
-            // justGauge2
-            // 
-            this.justGauge2.BackColor = System.Drawing.Color.White;
-            this.justGauge2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.justGauge2.Donut = false;
-            this.justGauge2.ForeColor = System.Drawing.Color.Black;
-            this.justGauge2.GaugeColor = System.Drawing.Color.Empty;
-            this.justGauge2.GaugeScaleWidth = 100;
-            this.justGauge2.HideInnerShadow = false;
-            this.justGauge2.HideMinMax = true;
-            this.justGauge2.Location = new System.Drawing.Point(3, 477);
-            this.justGauge2.MaxValue = 100;
-            this.justGauge2.MinValue = 0;
-            this.justGauge2.Name = "justGauge2";
-            this.justGauge2.NumberFormat = true;
-            this.justGauge2.Pointer = true;
-            this.justGauge2.Reverse = false;
-            this.justGauge2.Size = new System.Drawing.Size(446, 153);
-            this.justGauge2.Subtitle = "Hide Min Max Label";
-            this.justGauge2.TabIndex = 7;
-            this.justGauge2.Title = "JustGauge # 7";
-            this.justGauge2.Value = new decimal(new int[] {
-            10,
             0,
             0,
             0});
