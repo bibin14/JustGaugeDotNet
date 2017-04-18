@@ -266,7 +266,9 @@ namespace JustGaugeDotNet
             gaugeHtml = gaugeHtml.Replace("#MBtm#", this.Margin.Bottom.ToString());
             gaugeHtml = gaugeHtml.Replace("#MLft#", this.Margin.Left.ToString());
             gaugeHtml = gaugeHtml.Replace("#MRgt#", this.Margin.Right.ToString());
-            gaugeHtml = gaugeHtml.Replace("#GaugeScaleWidth#", Convert.ToDecimal(this.GaugeScaleWidth/100.00).ToString());
+            gaugeHtml = gaugeHtml.Replace("#BackColor#", this.BackColor.Name.ToLower());
+            gaugeHtml = gaugeHtml.Replace("#GaugeCustomSector#", this.GetCustomSectors());
+            gaugeHtml = gaugeHtml.Replace("#GaugeScaleWidth#", Convert.ToDecimal(this.GaugeScaleWidth / 100.00).ToString());
             if (this.GaugeColor == Color.Empty)
             {
                 gaugeHtml = gaugeHtml.Replace("#GaugeColor#", "");
@@ -276,6 +278,7 @@ namespace JustGaugeDotNet
                 gaugeHtml = gaugeHtml.Replace("#GaugeColor#", "gaugeColor: '" + this.GaugeColor.Name.ToLower() + "', ");
 
             }
+           
             if (this.Font.Italic == true)
             {
                 gaugeHtml = gaugeHtml.Replace("#FontStyle#", "italic");
@@ -317,6 +320,39 @@ namespace JustGaugeDotNet
         {
             this.plotGauge();
         }
+        #endregion
+
+        #region Custom Sectors
+
+        private List<GaugeSector> GaugeSectors = new List<GaugeSector>();
+
+        public void AddCustomSector(Color SectorColor, int LowValue, int HighValue)
+        {
+            GaugeSector _sector = new JustGaugeDotNet.GaugeSector();
+            _sector.SectorColor = SectorColor;
+            _sector.LowValue = LowValue;
+            _sector.HighValue = HighValue;
+            GaugeSectors.Add(_sector);
+        }
+
+        private string GetCustomSectors()
+        {
+            string sectorStr = "";
+            foreach( GaugeSector _gSector in GaugeSectors)
+            {
+                if (sectorStr == "")
+                {
+                    sectorStr += sectorStr + ", ";
+                }
+                sectorStr += "{ color: '" + _gSector.SectorColor.Name.ToLower() + "', lo: " + _gSector.LowValue + ", hi: " + _gSector.HighValue + " }";
+            }
+            if(GaugeSectors.Count > 0)
+            {
+                sectorStr += "customSectors: [ " + sectorStr + " ], ";
+            }
+            return sectorStr;
+        }
+
         #endregion
 
     }
