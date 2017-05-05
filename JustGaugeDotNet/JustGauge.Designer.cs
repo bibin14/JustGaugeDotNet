@@ -55,6 +55,7 @@
             this.Controls.Add(this.gaugeViewer);
             this.Name = "JustGauge";
             this.Size = new System.Drawing.Size(386, 287);
+            this.Load += new System.EventHandler(this.JustGauge_Load);
             this.BackColorChanged += new System.EventHandler(this.JustGauge_BackColorChanged);
             this.FontChanged += new System.EventHandler(this.JustGauge_FontChanged);
             this.MarginChanged += new System.EventHandler(this.JustGauge_MarginChanged);

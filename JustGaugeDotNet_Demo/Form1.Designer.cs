@@ -86,11 +86,7 @@
             this.justGauge2.Subtitle = "Hide MinMax";
             this.justGauge2.TabIndex = 7;
             this.justGauge2.Title = "JustGauge # 7";
-            this.justGauge2.Value = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
+            this.justGauge2.GaugeValue = 12;
             // 
             // justGauge1
             // 
@@ -113,11 +109,7 @@
             this.justGauge1.Subtitle = "Gauge Scale Width";
             this.justGauge1.TabIndex = 6;
             this.justGauge1.Title = "JustGauge # 8";
-            this.justGauge1.Value = new decimal(new int[] {
-            35,
-            0,
-            0,
-            0});
+            this.justGauge1.GaugeValue = 35;
             // 
             // justGuage5
             // 
@@ -140,11 +132,7 @@
             this.justGuage5.Subtitle = "No Pointer";
             this.justGuage5.TabIndex = 3;
             this.justGuage5.Title = "JustGauge # 4";
-            this.justGuage5.Value = new decimal(new int[] {
-            90,
-            0,
-            0,
-            0});
+            this.justGuage5.GaugeValue = 90;
             // 
             // justGuage4
             // 
@@ -167,11 +155,7 @@
             this.justGuage4.Subtitle = "Reverse";
             this.justGuage4.TabIndex = 2;
             this.justGuage4.Title = "JustGauge # 3";
-            this.justGuage4.Value = new decimal(new int[] {
-            200,
-            0,
-            0,
-            0});
+            this.justGuage4.GaugeValue = 200;
             // 
             // justGuage2
             // 
@@ -194,11 +178,7 @@
             this.justGuage2.Subtitle = "Subtitle";
             this.justGuage2.TabIndex = 0;
             this.justGuage2.Title = "JustGauge # 1";
-            this.justGuage2.Value = new decimal(new int[] {
-            40,
-            0,
-            0,
-            0});
+            this.justGuage2.GaugeValue =40;
             // 
             // justGuage3
             // 
@@ -221,11 +201,7 @@
             this.justGuage3.Subtitle = "Number Format";
             this.justGuage3.TabIndex = 1;
             this.justGuage3.Title = "JustGauge # 2";
-            this.justGuage3.Value = new decimal(new int[] {
-            69525,
-            0,
-            0,
-            0});
+            this.justGuage3.GaugeValue = 69525;
             // 
             // justGuage6
             // 
@@ -248,11 +224,7 @@
             this.justGuage6.Subtitle = "Donut";
             this.justGuage6.TabIndex = 4;
             this.justGuage6.Title = "JustGauge # 5";
-            this.justGuage6.Value = new decimal(new int[] {
-            55,
-            0,
-            0,
-            0});
+            this.justGuage6.GaugeValue = 55;
             // 
             // justGuage7
             // 
@@ -275,11 +247,7 @@
             this.justGuage7.Subtitle = "Gauge Backcolor";
             this.justGuage7.TabIndex = 5;
             this.justGuage7.Title = "JustGauge # 6";
-            this.justGuage7.Value = new decimal(new int[] {
-            1100,
-            0,
-            0,
-            0});
+            this.justGuage7.GaugeValue = 1100;
             // 
             // Form1
             // 

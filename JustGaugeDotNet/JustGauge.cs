@@ -31,21 +31,24 @@ namespace JustGaugeDotNet
 
         private decimal _value;
         [Category("JustGauge Values")]
-        public decimal Value {
+        public decimal GaugeValue
+        {
             get {
                 return _value;
             }
             set {
                 _value = value;
-                object[] args = { _value };
-                this.gaugeViewer.Document.InvokeScript("setValue", args);
-                //object[] codeString = { "g1.refresh(" + _value + ");" };
-                //gaugeViewer.Document.InvokeScript("eval", codeString);
+                if (this.gaugeViewer.DocumentText != "")
+                {
+                    object[] args = { _value };
+                    this.gaugeViewer.Document.InvokeScript("setValue", args);
+                }
                 
+              //  this.plotGauge();
             }
         }
 
-        private string _title; 
+        private string _title = "Title"; 
         [Category("JustGauge Values")]
         public string Title {
             get {
@@ -53,11 +56,14 @@ namespace JustGaugeDotNet
             }
             set {
                 _title = value;
-                this.plotGauge();
+                if (this.gaugeViewer.DocumentText != "")
+                {
+                    this.plotGauge();
+                }
             }
         }
 
-        private string _subtitle;
+        private string _subtitle = "Subtitle";
         [Category("JustGauge Values")]
         public string Subtitle
         {
@@ -68,7 +74,10 @@ namespace JustGaugeDotNet
             set
             {
                 _subtitle = value;
-                this.plotGauge();
+                if (this.gaugeViewer.DocumentText != "")
+                {
+                    this.plotGauge();
+                }
             }
         }
 
@@ -84,7 +93,10 @@ namespace JustGaugeDotNet
             set
             {
                 _donut = value;
-                this.plotGauge();
+                if (this.gaugeViewer.DocumentText != "")
+                {
+                    this.plotGauge();
+                }
             }
         }
 
@@ -101,7 +113,10 @@ namespace JustGaugeDotNet
             set
             {
                 _pointer = value;
-                this.plotGauge();
+                if (this.gaugeViewer.DocumentText != "")
+                {
+                    this.plotGauge();
+                }
             }
         }
         
@@ -117,7 +132,10 @@ namespace JustGaugeDotNet
             set
             {
                 _numformat = value;
-                this.plotGauge();
+                if (this.gaugeViewer.DocumentText != "")
+                {
+                    this.plotGauge();
+                }
             }
         }
         
@@ -132,7 +150,10 @@ namespace JustGaugeDotNet
             set
             {
                 _reverse = value;
-                this.plotGauge();
+                if (this.gaugeViewer.DocumentText != "")
+                {
+                    this.plotGauge();
+                }
             }
         }
 
@@ -148,7 +169,10 @@ namespace JustGaugeDotNet
             set
             {
                 _hideMinMax = value;
-                this.plotGauge();
+                if (this.gaugeViewer.DocumentText != "")
+                {
+                    this.plotGauge();
+                }
             }
         }
 
@@ -165,7 +189,10 @@ namespace JustGaugeDotNet
             set
             {
                 _hideInnerShadow = value;
-                this.plotGauge();
+                if (this.gaugeViewer.DocumentText != "")
+                {
+                    this.plotGauge();
+                }
             }
         }
 
@@ -181,7 +208,10 @@ namespace JustGaugeDotNet
             set
             {
                 _gaugeColor = value;
-                this.plotGauge();
+                if (this.gaugeViewer.DocumentText != "")
+                {
+                    this.plotGauge();
+                }
             }
         }
 
@@ -199,7 +229,10 @@ namespace JustGaugeDotNet
                 if (value >= 0 && value <= 100)
                 {
                     _gaugeScaleWidth = value;
-                    this.plotGauge();
+                    if (this.gaugeViewer.DocumentText != "")
+                    {
+                        this.plotGauge();
+                    }
                 }
                 else
                 {
@@ -235,13 +268,10 @@ namespace JustGaugeDotNet
         {
             InitializeComponent();
             MinValue = 0;
-            MaxValue = 100;            
-            this._title = "Title";
-            this._subtitle = "Subtitle";
+            MaxValue = 100;
             //this._gaugeColor = Color.Gainsboro;
             this.ForeColor = Color.Black;
             this.ForeColorChanged += new System.EventHandler(this.JustGauge_ForeColorChanged);
-            this.plotGauge();
         }
 
         private void plotGauge()
@@ -250,7 +280,6 @@ namespace JustGaugeDotNet
 
             gaugeHtml = gaugeHtml.Replace("#MinValue#", this.MinValue.ToString());
             gaugeHtml = gaugeHtml.Replace("#MaxValue#", this.MaxValue.ToString());
-            gaugeHtml = gaugeHtml.Replace("#Value#", this.Value.ToString());
             gaugeHtml = gaugeHtml.Replace("#Title#", this.Title);
             gaugeHtml = gaugeHtml.Replace("#SubTitle#", this.Subtitle);
             gaugeHtml = gaugeHtml.Replace("#Donut#", this.Donut.ToString().ToLower());
@@ -288,6 +317,7 @@ namespace JustGaugeDotNet
                 gaugeHtml = gaugeHtml.Replace("#FontStyle#", "normal");
             }
                 
+            gaugeHtml = gaugeHtml.Replace("#Value#", this.GaugeValue.ToString());
 
             this.gaugeViewer.Navigate("about:blank");
             HtmlDocument doc = this.gaugeViewer.Document;
@@ -303,22 +333,34 @@ namespace JustGaugeDotNet
         #region Appearance
         private void JustGauge_FontChanged(object sender, EventArgs e)
         {
-            this.plotGauge();
+            if (this.gaugeViewer.DocumentText != "")
+            {
+                this.plotGauge();
+            }
         }
 
         private void JustGauge_ForeColorChanged(object sender, EventArgs e)
         {
-            this.plotGauge();
+            if (this.gaugeViewer.DocumentText != "")
+            {
+                this.plotGauge();
+            }
         }
 
         private void JustGauge_BackColorChanged(object sender, EventArgs e)
         {
-            this.plotGauge();
+            if (this.gaugeViewer.DocumentText != "")
+            {
+                this.plotGauge();
+            }
         }
 
         private void JustGauge_MarginChanged(object sender, EventArgs e)
         {
-            this.plotGauge();
+            if (this.gaugeViewer.DocumentText != "")
+            {
+                this.plotGauge();
+            }
         }
         #endregion
 
@@ -355,5 +397,9 @@ namespace JustGaugeDotNet
 
         #endregion
 
+        private void JustGauge_Load(object sender, EventArgs e)
+        {
+            this.plotGauge();
+        }
     }
 }
